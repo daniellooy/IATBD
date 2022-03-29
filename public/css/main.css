@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    box-sizing: inherit;
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.8rem;
+    padding: 2rem;
+    background: #E4F9F5;
+    font-family: sans-serif;
+}
+
+.dierCard{
+    width: 40rem;
+    height: 40rem;
+    margin: 0 auto;
+    box-shadow: 0 0.4rem 0.8rem black;
+    position: relative;
+}
+
+.dierCard::after{
+    content:"";
+    width: 5rem;
+    height:5rem;
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    background: #30E3CA;
+    clip-path:polygon(100% 0%, 100% 100%, 0% 100%);
+}
+
+.dierCard__figure{
+    width: 100%;
+    height: 60%;
+}
+
+.dierCard__image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dierCard__text{
+    color: #40514E;
+    height: 20%;
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+}
+
+.dierCard__buttonsection{
+    height: 20%;
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+}
+
+.dierCard__button{
+    padding: 1.5rem 3rem;
+    background: #30E3CA;
+    box-sizing: border-box;
+    border:none;
+    color:40514E;
+    border-radius: 1rem;
+    box-shadow: 0 0.3rem 0.5rem rgba(64, 81, 78, 0.3);
+}
+
+.dierCard__button:hover{
+    cursor:pointer;
+    background: #11999E;
+    box-shadow: 0 0.4rem 0.7rem rgba(64, 81, 78, 0.3);
+}
+
+.create-form{
+    width:40%;
+    margin: 0 auto;
+    box-shadow: 0 0.4rem 0.7rem rgba(64, 81, 78, 0.3);
+    min-height: 70vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2rem;
+    background: #dafff8;
+}
+
+.create-form__form{
+    width: 100%;
+}
+
+.create-form__section{
+    margin-top: 3rem;
+    font-size: 140%;
+    width: 100%;    
+}
+
+.create-form__input{
+    display: block;
+    width: 80%;
+    margin-top:0.8rem;
+    font-size: 70%;
+}
+
+.create-form__input--big{
+    height: 10rem;
+}
+
+.create-form__button{
+    padding: 1.5rem 3rem;
+    background: #30E3CA;
+    box-sizing: border-box;
+    border:none;
+    color:40514E;
+    border-radius: 1rem;
+    box-shadow: 0 0.3rem 0.5rem rgba(64, 81, 78, 0.3);
+}
+
+.filter-secttion{
+    width:100%;
+    font-size: 140%;
+
+}
+
+.filter-section__wrapper{
+    display: inline-block;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+button:hover{
+    cursor:pointer;
+}
+
+@media (max-width:62.5rem){
+    .create-form{
+        width:80%
+    }
+}
+
+/* utility classes */
+.u-list-style-none{
+    list-style: none;
+}
+
+.u-grid-3{
+    width:100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr
+}
+
+.u-grid-gap-4{
+    gap: 4rem;
+}
