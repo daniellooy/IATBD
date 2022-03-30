@@ -14,6 +14,7 @@ class CreateHuisdierenTable extends Migration
     public function up()
     {
         Schema::create('huisdieren', function (Blueprint $table) {
+            $table->id();
             $table->string("name")->unique();
             $table->string("kind");
             $table->string("eigenaar");

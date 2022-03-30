@@ -32,9 +32,9 @@ Route::middleware(["auth", "eigenaar"])->group(function(){
 });
 
 Route::middleware(["auth", "oppasser"])->group(function(){
-    // Route::get("/dieren", [\App\Http\Controllers\DierenController::class, "index"]);
+    Route::get("/dieren", [\App\Http\Controllers\DierenController::class, "index"]);
     Route::get("/dieren/{id}", [\App\Http\Controllers\DierenController::class, "show"]);
-    Rout::get("/verzoek/{id}", [\App\Http\Controllers\VerzoekenController::class, "store"]);
+    Route::get("/verzoek/{id}", [\App\Http\Controllers\VerzoekenController::class, "store"]);
 });
 
 Route::get('/dashboard', function () {
