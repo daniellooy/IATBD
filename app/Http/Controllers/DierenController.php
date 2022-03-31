@@ -14,6 +14,12 @@ class DierenController extends Controller
         ]);
     }
 
+    public function eigenaar(){
+        return view("eigenaar.index",[
+            "dieren" => \App\Models\Huisdieren::all()->where("eigenaar", Auth::user()->email)
+        ]);
+    }
+
     public function show($id){
         return view("dieren.show",[
             "dier" => \App\Models\Huisdieren::find($id)

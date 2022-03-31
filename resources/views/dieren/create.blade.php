@@ -5,6 +5,7 @@
 @endsection
 
 @section("content")
+    @include("header")
     <article class="create-form">
         <form class="create-form__form" action="/dieren" method="POST">
             @csrf
