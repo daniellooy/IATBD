@@ -8,7 +8,7 @@
         <p>{{$dier->description}}</p>
     </section>
     <section class="dierCard__buttonsection">
-        <form action="" method="post">
+        <form action="/verzoek/create/{{$dier->id}}" method="POST">
             <button class="dierCard__button">Reserveer dier</button>
         </form>
     </section>
