@@ -8,8 +8,10 @@
         <p>{{$dier->description}}</p>
     </section>
     <section class="dierCard__buttonsection">
-        <form action="/verzoek/create/{{$dier->id}}" method="POST">
+        <form action="/verzoek" method="POST">
+            @csrf
             <button class="dierCard__button">Reserveer dier</button>
+            <input name="dier" type="text" value="{{$dier->name}}" hidden>
         </form>
     </section>
 </article>

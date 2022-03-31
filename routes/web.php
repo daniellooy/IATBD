@@ -27,6 +27,7 @@ Route::middleware(["auth", "eigenaar"])->group(function(){
     Route::get("/huizen", [\App\Http\Controllers\HuisController::class, "index"]);
     Route::get("/dieren/create", [\App\Http\Controllers\DierenController::class, "create"]);
     Route::post("/dieren", [\App\Http\Controllers\DierenController::class, "store"]);
+    Route::get("/verzoeken", [\App\Http\Controllers\VerzoekenController::class, "index"]);
 
 
 });
@@ -34,7 +35,7 @@ Route::middleware(["auth", "eigenaar"])->group(function(){
 Route::middleware(["auth", "oppasser"])->group(function(){
     Route::get("/dieren", [\App\Http\Controllers\DierenController::class, "index"]);
     Route::get("/dieren/{id}", [\App\Http\Controllers\DierenController::class, "show"]);
-    Route::get("/verzoek/{id}", [\App\Http\Controllers\VerzoekenController::class, "store"]);
+    Route::post("/verzoek", [\App\Http\Controllers\VerzoekenController::class, "store"]);
 });
 
 Route::get('/dashboard', function () {
