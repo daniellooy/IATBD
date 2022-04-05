@@ -18,6 +18,8 @@ class CreateHuisdierenTable extends Migration
             $table->string("name")->unique();
             $table->string("kind");
             $table->string("eigenaar");
+            $table->string("oppasser")->nullable();
+            $table->integer("verzoek")->default(0);
             $table->foreign("eigenaar")->references("email")->on("users");
             $table->foreign("kind")->references("kind")->on("dieren");
         });

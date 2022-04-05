@@ -10,7 +10,7 @@
     <section class="dierCard__buttonsection">
         <form action="/verzoek" method="POST">
             @csrf
-            <button class="dierCard__button">Reserveer dier</button>
+            <button class="dierCard__button" type="submit">Reserveer dier</button>
             <input name="dier" type="text" value="{{$dier->name}}" hidden>
         </form>
     </section>

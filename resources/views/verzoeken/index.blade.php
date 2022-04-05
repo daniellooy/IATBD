@@ -6,10 +6,16 @@
 
 @section("content")
 <section>
-    <p>{{$verzoek->dier}}</p>
-    <p>{{$verzoek->email}}</p>
-    <form action="/verzoeken/{{$verzoek->id}}">
-        <button>Bekijk oppasser</button>
-    </form>
+    @include("header")
+    <ul class="regel">
+        @foreach($aanvragen as $dier)
+            @include("verzoeken.components.dierregel--verzoek")
+        @endforeach
+    </ul>
+    <ul class="regel">
+        @foreach($geaccepteerd as $dier)
+            @include("verzoeken.components.dierregel--geaccepteerd")
+        @endforeach
+    </ul>
 </section>
 @endsection

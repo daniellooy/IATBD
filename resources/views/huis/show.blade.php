@@ -1,10 +1,10 @@
 @extends("default")
 
 @section("title")
-    {{$dier->name}}
+    Huis
 @endsection
 
 @section("content")
     @include("header")
-    @include("dieren.components.dierCard--show")
+    @include("huis.components.huisCard")
 @endsection

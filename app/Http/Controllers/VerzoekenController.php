@@ -4,40 +4,40 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use DB;
 
 class VerzoekenController extends Controller
 {
     public function index(){
-        $huisdieren_van_user = \App\Models\Huisdieren::all()->where("eigenaar", Auth::user()->email); 
-
-        for($i=0; $i<count($huisdieren_van_user); $i++){
-            $huisdier_namen = array();
-            array_push($huisdier_namen, $huisdieren_van_user[$i]->name);
-        }
-
-        // return $huisdier_namen;
-
-        return \App\Models\Verzoeken::wherein("name", ["Dier 1", "Dier 2", "Dier2"]);
-
-        // return \App\Models\Huisdieren::where("eigenaar", Auth::$user->email);
-        // return view("verzoeken.index",[
-        //     "verzoek" => \App\Models\Verzoeken::where("dier", "")->first()
-        // ]);
+        return view("verzoeken.index", [
+            "aanvragen" => \App\Models\Huisdieren::all()->where("verzoek", 1)->where("eigenaar", Auth::user()->email),
+            "geaccepteerd" => \App\Models\Huisdieren::all()->where("verzoek", 2)->where("eigenaar", Auth::user()->email)
+        ]);
     }
 
-    
+    public function show(){
+        return view("admin.verzoeken", [
+            "verzoeken" => \App\Models\Huisdieren::all()->whereNotNull("oppasser")
+        ]);
+    }
 
+    public function store(Request $request){
+        DB::table("huisdieren")->where("name", $request->input("dier"))->update(["verzoek"=>1, "oppasser" => Auth::user()->email]);
+        return redirect("/oppasser");
+    }
 
-    public function store(Request $request, \App\Models\Verzoeken $verzoek){
-        $verzoek->dier = $request->input("dier");
-        $verzoek->oppasser = Auth::user()->email;
+    public function delete(Request $request){
+        DB::table("huisdieren")->where("name", $request->input("dier"))->update(["verzoek"=>0, "oppasser" => null]);
+        return redirect("/admin/verzoeken");
+    }
 
-        try{
-            $verzoek->save();
-            return redirect("/dieren");
-        }
-        catch(Exception $e){
-            return "helaas niet gelukt";
-        }
+    public function accept(Request $request){
+        DB::table("huisdieren")->where("name", $request->input("dier"))->update(["verzoek"=>2]);
+        return redirect("/verzoeken");
+    }
+
+    public function afwijzen(Request $request){
+        DB::table("huisdieren")->where("name", $request->input("dier"))->update(["verzoek"=>0, "oppasser" => null]);
+        return redirect("/verzoeken");
     }
 }

@@ -20,7 +20,6 @@ class DatabaseSeeder extends Seeder
             KatTableSeeder::class,
             KonijnTableSeeder::class,
             SchildpadTableSeeder::class,
-            HuisTableSeeder::class,
             RolesTableSeeder::class,
             UsersTableSeeder::class
         ]);

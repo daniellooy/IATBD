@@ -6,5 +6,5 @@
 
 @section("content")
     @include("header")
-    @include("dieren.components.dierCard--show")
+    @include("oppasser.components.dierCard--show")
 @endsection

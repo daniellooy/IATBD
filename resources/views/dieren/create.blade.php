@@ -30,7 +30,7 @@
             </section>
 
             <section class="create-form__section">
-                <label for="image">Afbeelding</label>
+                <label for="image">Afbeelding url</label>
                 <input class="create-form__input" name="image" id="image" type="text">
             </section>
 

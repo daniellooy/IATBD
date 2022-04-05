@@ -14,8 +14,15 @@ class CreateHuisTable extends Migration
     public function up()
     {
         Schema::create('huis', function (Blueprint $table) {
-            $table->string("name")->unique();
-            $table->string("image")->default("/img/huis.jpg");
+            $table->string("oppasser")->unique();
+            $table->string("name");
+            $table->string("huisnummer");
+            $table->string("postcode");
+            $table->string("plaatsnaam");
+            $table->string("image1");
+            $table->string("image2")->nullable();
+            $table->string("image3")->nullable();
+            $table->string("image4")->nullable();
         });
     }
 

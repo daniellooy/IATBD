@@ -1,13 +1,14 @@
 @extends("default")
 
 @section("title")
-    huizen
+    mijndieren
 @endsection
 
 @section("content")
+    @include("header")
     <ul class="u-grid-3 u-grid-gap-4">
-        @foreach($huis as $huis)
-            @include("huis.components.huisCard")
+        @foreach($dieren as $dier)
+            @include("oppasser.components.dierCard--index")
         @endforeach
     </ul>
 @endsection

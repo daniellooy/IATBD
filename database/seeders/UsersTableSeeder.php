@@ -32,8 +32,25 @@ class UsersTableSeeder extends Seeder
         ]);
 
         DB::table("users")->insert([
+            "name" => "eigenaar2", 
+            "email" => "eigenaar2@test.nl",
+            "password" => bcrypt("Fietsbel99"),
+            "category" => "eigenaar",
+            "role" => "eigenaar"
+        ]);
+
+        DB::table("users")->insert([
             "name" => "oppasser", 
             "email" => "oppasser@test.nl",
+            "password" => bcrypt("Fietsbel99"),
+            "category" => "oppasser",
+            "role" => "oppasser"
+
+        ]);
+
+        DB::table("users")->insert([
+            "name" => "oppasser2", 
+            "email" => "oppasser2@test.nl",
             "password" => bcrypt("Fietsbel99"),
             "category" => "oppasser",
             "role" => "oppasser"
