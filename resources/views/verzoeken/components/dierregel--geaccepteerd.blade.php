@@ -7,7 +7,7 @@
         <input name="oppasser" type="text" value="{{$dier->oppasser}}" hidden>
         <button class="regel__item__button" >Bekijk oppasser</button>
     </form>
-    <form class="regel__item" action="/dieren/delete" method="POST">
+    <form class="regel__item" action="/review/create" method="POST">
         @csrf
         <input name="dier" type="text" value="{{$dier->name}}" hidden>
         <button class="regelitem__button" type="submit">Verwijderen</button>

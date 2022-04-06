@@ -32,6 +32,8 @@ Route::middleware(["auth", "eigenaar"])->group(function(){
     Route::post("/afwijzen", [\App\Http\Controllers\VerzoekenController::class, "afwijzen"]);
     Route::post("/dieren/delete", [\App\Http\Controllers\DierenController::class, "delete"]);
     Route::post("/huis", [\App\Http\Controllers\HuisController::class, "show"]);
+    Route::post("/review/create", [\App\Http\Controllers\ReviewController::class, "create"]);
+    Route::post("/review/store", [\App\Http\Controllers\ReviewController::class, "store"]);
 
 
 
