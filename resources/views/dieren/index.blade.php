@@ -11,28 +11,33 @@
             <li class="nav__li">
                 <a class="nav__a" href="/mijndieren"><button class="nav__button" >Mijn dieren</button></a>
             </li>
+            <li class="nav__li">
+                <a class="nav__a" href="/reviews"><button class="nav__button" >Reviews</button></a>
+            </li>
         </ul>
     </nav>
     <section class="filter-section">
-        <section class="filter-section__wrapper">
-            <label class="filter-section__label" for="Geit">Geit</label>
-            <input class="filter-section__input" id="Geit" type="checkbox" name="Geit">
-        </section>
-        <section class="filter-section__wrapper">
-            <label class="filter-section__label" for="Hond">Hond</label>
-            <input class="filter-section__input" id="Hond" type="checkbox" name="Hond">
-        </section>
-        <section class="filter-section__wrapper">
-            <label class="filter-section__label" for="Kat">Kat</label>
-            <input class="filter-section__input" id="Kat" type="checkbox" name="Kat">
-        </section>
-        <section class="filter-section__wrapper">
-            <label class="filter-section__label" for="Konijn">Konijn</label>
-            <input class="filter-section__input" id="Konijn" type="checkbox" name="Konijn">
-        </section>
-        <section class="filter-section__wrapper">
-            <label class="filter-section__label" for="Schildpad">Schildpad</label>
-            <input class="filter-section__input" id="Schildpad" type="checkbox" name="Schildpad">
+        <section class="filter-section__stripe">
+            <section class="filter-section__wrapper">
+                <label class="filter-section__label" for="Geit">Geit</label>
+                <input class="filter-section__input" id="Geit" type="checkbox" name="Geit">
+            </section>
+            <section class="filter-section__wrapper">
+                <label class="filter-section__label" for="Hond">Hond</label>
+                <input class="filter-section__input" id="Hond" type="checkbox" name="Hond">
+            </section>
+            <section class="filter-section__wrapper">
+                <label class="filter-section__label" for="Kat">Kat</label>
+                <input class="filter-section__input" id="Kat" type="checkbox" name="Kat">
+            </section>
+            <section class="filter-section__wrapper">
+                <label class="filter-section__label" for="Konijn">Konijn</label>
+                <input class="filter-section__input" id="Konijn" type="checkbox" name="Konijn">
+            </section>
+            <section class="filter-section__wrapper">
+                <label class="filter-section__label" for="Schildpad">Schildpad</label>
+                <input class="filter-section__input" id="Schildpad" type="checkbox" name="Schildpad">
+            </section>
         </section>
     </section>
 

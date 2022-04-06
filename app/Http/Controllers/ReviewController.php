@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
+use Auth;
 
 class ReviewController extends Controller
 {
@@ -25,5 +27,11 @@ class ReviewController extends Controller
         catch(Exception $e){
             return redirect("/review/create");
         }
+    }
+
+    public function index(){
+        return view("review.index", [
+            "reviews" => \App\Models\Review::all()->where("oppasser", Auth::user()->email)
+        ]);
     }
 }

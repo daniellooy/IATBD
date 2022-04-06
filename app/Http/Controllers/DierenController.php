@@ -59,18 +59,22 @@ class DierenController extends Controller
     public function store(Request $request, \App\Models\Huisdieren $dier){
         $dier->name = $request->input("name");
         $dier->kind = $request->input("kind");
-        $dier->description = $request->input("description"); 
         $dier->eigenaar = Auth::user()->email;
         $dier->image = $request->input("image");
+        $dier->prijs = $request->input("prijs");
+        $dier->vanafdag = $request->input("vanafdag");
+        $dier->vanaftijd = $request->input("vanaftijd");
+        $dier->totdag = $request->input("totdag");
+        $dier->tottijd = $request->input("tottijd");
 
 
-        try{
+        // try{
             $dier->save();
             return redirect("/eigenaar");
-        }
-        catch(Exception $e){
-            return redirect("/dieren/create");
-        }
+        // }
+        // catch(Exception $e){
+        //     return redirect("/dieren/create");
+        // }
     }
 
     public function checkRole(){
@@ -92,6 +96,8 @@ class DierenController extends Controller
 
     public function delete(Request $request){
         DB::table("huisdieren")->where("name", $request->input("dier"))->delete();
-        return redirect("/verzoeken");
+        return redirect("/home");
+
     }
+
 }

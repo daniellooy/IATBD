@@ -35,10 +35,6 @@ Route::middleware(["auth", "eigenaar"])->group(function(){
     Route::post("/review/create", [\App\Http\Controllers\ReviewController::class, "create"]);
     Route::post("/review/store", [\App\Http\Controllers\ReviewController::class, "store"]);
 
-
-
-
-
 });
 
 Route::middleware(["auth", "oppasser"])->group(function(){
@@ -49,7 +45,7 @@ Route::middleware(["auth", "oppasser"])->group(function(){
     Route::get("/mijndieren/{id}", [\App\Http\Controllers\DierenController::class, "oppassershow"]);
     Route::get("huis/create", [\App\Http\Controllers\HuisController::class, "create"]);
     Route::post("/huizen", [\App\Http\Controllers\HuisController::class, "store"]);
-    
+    Route::get("/reviews", [\App\Http\Controllers\ReviewController::class, "index"]);
 });
 
 

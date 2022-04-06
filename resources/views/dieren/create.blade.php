@@ -11,23 +11,40 @@
             @csrf
             <h1 class="create-form__header">Meld nieuw huisdier aan</h1>
             <section class="create-form__section">
-                <label for="name">Naam</label>
-                <input class="create-form__input" name="name" id="name" type="text">
+                <label for="name">Naam van dier</label>
+                <input class="create-form__input" name="name" id="name" type="text" maxlength="25"> 
             </section>
 
-            <section class="create-form__section">
-                <label for="kind">Soort dier</label>
-                <select class="create-form__input" name="kind" id="kind">
-                    @foreach($animal as $animal)
-                        <option value="{{$animal->kind}}">{{$animal->kind}}</option>
-                    @endforeach
-                </select>
+            <section class="create-form__split">
+                <section class="create-form__section left">
+                    <label for="kind">Soort dier</label>
+                    <select class="create-form__input-split" name="kind" id="kind">
+                        @foreach($animal as $animal)
+                            <option value="{{$animal->kind}}">{{$animal->kind}}</option>
+                        @endforeach
+                    </select>
+                </section>
+    
+                <section class="create-form__section">
+                    <label for="prijs">Prijs</label>
+                    <input class="create-form__input-split" name="prijs" id="prijs" type="number">
+                </section>
             </section>
 
-            <section class="create-form__section">
-                <label for="description">Beschrijving</label>
-                <textarea class="create-form__input create-form__input--big" name="description" id="description" rows="4"></textarea>
+            <section class="create-form__split">
+                <section class="create-form__section left">
+                    <label for="vanaf">Vanaf</label>
+                    <input class="create-form__input-split" name="vanafdag" id="vanaf" type="date">
+                    <input class="create-form__input-split" name="vanaftijd" id="vanaf" type="time">
+                </section>
+    
+                <section class="create-form__section">
+                    <label for="tot">Tot</label>
+                    <input class="create-form__input-split" name="totdag" id="tot" type="date">
+                    <input class="create-form__input-split" name="tottijd" id="tot" type="time">
+                </section>
             </section>
+
 
             <section class="create-form__section">
                 <label for="image">Afbeelding url</label>
