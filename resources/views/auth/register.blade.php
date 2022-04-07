@@ -29,8 +29,8 @@
             <div class="mt-4">
                 <x-label for="role" :value="__('Soort account')" />
                 <select name="role" id="role">
-                    <option value="Eigenaar">Eigenaar</option>
-                    <option value="Oppasser">Oppasser</option>
+                    <option value="eigenaar">Eigenaar</option>
+                    <option value="oppasser">Oppasser</option>
                 </select>
                 <!-- <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required /> -->
             </div>
