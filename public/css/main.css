@@ -21,6 +21,15 @@ body{
     width: 40rem;
     height: 40rem;
     margin: 0 auto;
+    background: #caf5ec;
+    box-shadow: 0 0.4rem 0.8rem black;
+    position: relative;
+}
+
+.dierCard__mijndier{
+    width: 40rem;
+    height: 50rem;
+    margin: 0 auto;
     box-shadow: 0 0.4rem 0.8rem black;
     position: relative;
 }
@@ -97,6 +106,118 @@ body{
     cursor:pointer;
     background: #11999E;
     box-shadow: 0 0.4rem 0.7rem rgba(64, 81, 78, 0.3);
+}
+
+.showCard{
+    width: 40vw;
+    height: 70vh;
+    margin: 6rem auto;
+    background: #caf5ec;
+    box-shadow: 0 0.4rem 0.8rem black;
+    position: relative;
+}
+
+.showCard__section__wrapper{
+    display: flex;
+    justify-content: center;
+
+}
+
+.showCard__section{
+    margin: 0 6rem;
+}
+
+.showCard__section__mijndier{
+    margin: 0;
+}
+
+.showCard__figure{
+    width: 100%;
+    height: 60%;
+}
+
+.showCard__image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.showCard__text{
+    color: #1d2020;
+    /* height: 20%; */
+    /* display: flex; */
+    padding: 1.5rem 1rem 0 1rem;
+    margin: 0 1rem;
+    align-items: center;
+}
+
+.showCard__title{
+    font-weight: bold;
+    text-align: center;
+    font-size: 3rem;
+    padding: 2rem;
+}
+
+.showCard__buttonsection{
+    height: 20%;
+    display: flex;
+    padding: 0 1rem 0 1rem;
+    margin: 3rem;
+    justify-content: center;
+}
+
+.showCard__button{
+    padding: 1.5rem 3rem;
+    background: #30E3CA;
+    box-sizing: border-box;
+    border:none;
+    color:40514E;
+    border-radius: 1rem;
+    box-shadow: 0 0.3rem 0.5rem rgba(64, 81, 78, 0.3);
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.showCard__button:hover{
+    cursor:pointer;
+    background: #11999E;
+    box-shadow: 0 0.4rem 0.7rem rgba(64, 81, 78, 0.3);
+}
+
+.reviewCard{
+    width: 40rem;
+    height: 20rem;
+    background: #caf5ec;
+    margin: 0 auto;
+    box-shadow: 0 0.4rem 0.8rem black;
+    position: relative;
+}
+
+.reviewCard::after{
+    content:"";
+    width: 3rem;
+    height:3rem;
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    background: #30E3CA;
+    clip-path:polygon(100% 0%, 100% 100%, 0% 100%);
+}
+
+.reviewCard__text{
+    color: #1d2020;
+    /* height: 20%; */
+    /* display: flex; */
+    padding: 1.5rem 1rem 0 1rem;
+    margin: 0 1rem;
+    align-items: center;
+}
+
+.reviewCard__title{
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem;
 }
 
 .create-form{
@@ -342,7 +463,8 @@ h2{
     padding-left: 5rem;
     padding-right: 5rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 2rem;
 }
 
 .u-grid-gap-4{

@@ -23,8 +23,5 @@ class RolesTableSeeder extends Seeder
         DB::table("roles")->insert([
             "role" => "oppasser", 
         ]);
-        DB::table("roles")->insert([
-            "role" => "guest", 
-        ]);
     }
 }

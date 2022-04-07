@@ -10,11 +10,11 @@
     <ul class="u-grid-3 u-grid-gap-4">
         @foreach($reviews as $review)
         <li class="u-list-style-none" >
-            <article class="dierCard">
-                <section class="dierCard__text">
+            <article class="reviewCard">
+                <section class="reviewCard__text reviewCard__title">
                     <p>Review van {{$review->eigenaar}}</p>
                 </section>
-                <section class="dierCard__text">
+                <section class="reviewCard__text">
                     <p>{{$review->content}}</p>
                 </section>
             </article>
