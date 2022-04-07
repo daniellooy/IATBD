@@ -21,13 +21,13 @@
                 <section class="dierCard__text">
                     <p>Vanaf {{$dier->vanafdag}} om {{$dier->vanaftijd}}</p>
                 </section>
-                <section class="dierCard__buttonsection">
+                <!-- <section class="dierCard__buttonsection">
                     <form action="/dieren/delete" method="POST">
                         @csrf
                         <input name="dier" type="text" value="{{$dier->name}}" hidden>
                         <button class="dierCard__button" type="submit">Verwijderen</button>
                     </form>
-                </section>
+                </section> -->
             </article>
         </li>
         @endforeach
