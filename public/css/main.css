@@ -12,8 +12,10 @@ html{
 }
 
 body{
+    /* width: 100vw; */
     font-size: 1.8rem;
     padding: 2rem;
+    /* background: red; */
     background: #E4F9F5;
 }
 
@@ -109,9 +111,12 @@ body{
 }
 
 .showCard{
-    width: 40vw;
-    height: 70vh;
-    margin: 6rem auto;
+    /* width: 40vw;
+    height: 70vh; */
+    width: 55rem;
+    height: 59rem;
+
+    margin: 2rem auto;
     background: #caf5ec;
     box-shadow: 0 0.4rem 0.8rem black;
     position: relative;
@@ -120,7 +125,6 @@ body{
 .showCard__section__wrapper{
     display: flex;
     justify-content: center;
-
 }
 
 .showCard__section{
@@ -146,8 +150,8 @@ body{
     color: #1d2020;
     /* height: 20%; */
     /* display: flex; */
-    padding: 1.5rem 1rem 0 1rem;
-    margin: 0 1rem;
+    padding: 0 1rem 1.5rem 1rem;
+    /* margin: 0 1rem; */
     align-items: center;
 }
 
@@ -155,14 +159,14 @@ body{
     font-weight: bold;
     text-align: center;
     font-size: 3rem;
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 .showCard__buttonsection{
     height: 20%;
     display: flex;
     padding: 0 1rem 0 1rem;
-    margin: 3rem;
+    /* margin: 3rem; */
     justify-content: center;
 }
 
@@ -284,10 +288,6 @@ body{
     margin-right: 4rem;
 }
 
-.create-form__input--big{
-
-}
-
 .create-form__button{
     padding: 1.5rem 3rem;
     background: #30E3CA;
@@ -311,7 +311,7 @@ body{
 }
 
 .filter-section__stripe{
-    width: 40%;
+    width: 62%;
     border-bottom: 2px solid black;
 }
 
@@ -396,7 +396,13 @@ body{
     border-radius: 2rem;
     margin: 1rem;
     background: #caf5ec;
+    /* flex-direction: column; */
     align-items: center;
+}
+
+.regel__wrapper{
+    display: flex;
+    flex-direction: row;
 }
 
 .regel__item{
@@ -437,7 +443,7 @@ button:hover{
 .title-wrapper{
     display: flex;
     justify-content: center;
-
+    
 }
 
 h2{
@@ -447,10 +453,48 @@ h2{
     
 }
 
-@media (max-width:62.5rem){
-    .create-form{
-        width:80%
-    }
+.huisCard{
+    width: 70%;
+    margin: 3rem auto;
+    background: #caf5ec;
+    box-shadow: 0 0.4rem 0.8rem black;
+    position: relative;
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+}
+
+.huisCard__figure{
+    width: 100%;
+    /* height: 100%; */
+    /* background: blue; */
+}
+
+.huisCard__image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 2rem;
+}
+
+.huisCard__section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.huisCard__text{
+
+}
+
+.huisCard__text-wrapper{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* background: red; */
+    margin: 1rem;
 }
 
 /* utility classes */
@@ -463,10 +507,153 @@ h2{
     padding-left: 5rem;
     padding-right: 5rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     margin-top: 2rem;
 }
 
 .u-grid-gap-4{
-    gap: 6rem;
+    gap: 2rem;
+}
+
+@media (max-width: 1400px){
+    .u-grid-3{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 1200px){
+    .regel__li{
+        align-items: unset;
+    }
+
+    .regel__wrapper{
+        flex-direction: column;
+        /* align-items:flex-start; */
+    }
+
+    .regel__item{
+        margin: 1rem 0;
+    }
+
+    .filter-section__stripe{
+        width: 80%;
+    }
+}
+
+@media (max-width:1000px){
+    .u-grid-3{
+        grid-template-columns: 1fr;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .create-form{
+        width:80%
+    }
+    
+    h2{
+        font-size: 2rem;
+        width: 80%;
+    }
+
+    .nav__li{
+        margin: 5rem;
+    }
+
+    .filter-section{
+        font-size: 100%;
+    }
+
+    .filter-section__stripe{
+        width: 90%;
+    }
+
+    .huisCard{
+        width: 90%;
+    }
+}
+
+@media (max-width:700px){
+    h2{
+        font-size: 1.5rem;
+    }
+
+    .home{
+        justify-content:left;
+    }
+
+    .home__button{
+        font-size: 3rem;
+    }
+
+    .nav__ul{
+        flex-direction: column;
+    }
+
+    .nav__li{
+        margin: 1rem;
+    }
+
+    .create-form__header{
+        font-size: 2rem;
+    }
+
+    .create-form__section{
+        font-size: 2rem;
+    }
+
+    .regel__li{
+        flex-direction: column;
+    }
+
+    .showCard{
+        width: 35rem;
+        height: 80rem;
+    }
+
+    .showCard__section__wrapper{
+        flex-direction: column;
+    }
+
+    .huisCard__section{
+        flex-direction: column;
+    }
+}
+@media (max-width:500px){
+    h2{
+        width: 100%;
+    }
+
+    .home{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .home__button{
+        font-size: 2.3rem;
+    }
+
+    .home__logout{
+        font-size: 1.5rem;
+    }
+
+    .dierCard{
+        width: 35rem;
+    }
+
+    .showcard{
+        width: 35rem;
+    }
+
+    .reviewCard{
+        width: 35rem;
+    }
+
+    .dierCard__mijndier{
+        width: 35rem;
+    }
+
+    .create-form{
+        width: 100%;
+    }
 }

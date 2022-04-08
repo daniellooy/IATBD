@@ -18,7 +18,7 @@ class UsersTableSeeder extends Seeder
             "name" => "admin", 
             "email" => "admin@test.nl",
             "password" => bcrypt("Fietsbel99"),
-            "category" => "admin",
+            // "category" => "admin",
             "role" => "admin"
 
         ]);

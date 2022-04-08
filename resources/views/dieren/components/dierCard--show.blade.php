@@ -1,5 +1,4 @@
 
-
 <article class="showCard">
     <figure class="showCard__figure">
         <img class="showCard__image" src="{{$dier->image}}" alt="Dier">
